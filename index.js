@@ -66,7 +66,7 @@ const modalContents = [
         title: 'Контактная информация',
         text: `
             <ul class="contact-info">
-                <li class="contact-info-item"><i class='bx bx-map'></i><a href="https://www.google.com/maps/place/Khodynskiy+Bul'var,+2,+Moskva,+Russia,+125167/@55.7886442,37.5362964,17z/data=!3m1!4b1!4m6!3m5!1s0x46b549961baa7dc9:0x380560ea5d58f72!8m2!3d55.7886442!4d37.5388767!16s%2Fg%2F11fsst7k9z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank"> г. Москва, Ходынский бульвар д. 2</a></li>
+                <li class="contact-info-item"><i class='bx bx-map'></i><a href="https://www.google.com/maps/place/Khodynskiy+Bul'var,+2,+Moskva,+Russia,+125167/@55.7886442,37.5362964,17z/data=!3m1!4b1!4m6!3m5!1s0x46b549961baa7dc9:0x380560ea5d58f72!8m2!3d55.7886442!4d37.5388767!16s%2Fg%2F11fsst7k9z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Москва, Ходынский бульвар д. 2</a></li>
                 <li class="contact-info-item"><i class='bx bx-phone'></i><a href="tel:+79263451036"> 8-926-345-10-36</a></li>
                 <li class="contact-info-item"><i class='bx bx-envelope'></i><a href="mailto:10434@apmo.ru"> 10434@apmo.ru</a></li>
             </ul>
