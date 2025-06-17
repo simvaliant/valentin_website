@@ -256,7 +256,7 @@ body{
 .contact-info-item{
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: center;
     gap: 15px;
     margin-top: 30px;
 }
