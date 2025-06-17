@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo-text">Адвокат Борисов</h1>
+        </div>
+        <i class='bxr  bx-menu-right'  id="burger-menu"></i>
+        
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#products" class="nav-link">Услуги</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link">Практика</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link btn-to-modal" data-modal="contactInfo">Контакты</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar-mobile">
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="#products" class="nav-link">Услуги</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link">Практика</a></li>
+                <li class="nav-list-item"><a href="#" class="nav-link btn-to-modal" data-modal="contactInfo">Контакты</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main class="main">
+        <section class="section hero-section">
+            <article class="hero-pic">
+                <div class="hero-pic-wrapper">
+                    <img src="./assets/pics/aboutphoto.jpg" alt="profile pic" class="hero-pic-img">
+                </div>
+            </article>
+            <article class="hero-text">
+                <h2 class="hero-text-h2">Приветствую Вас!</h2>
+                <h1 class="hero-text-h1 heading">Я Валентин Валерьевич Борисов</h1>
+                <h3 class="hero-text-h3">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</h3>
+                <div class="hero-btn-group">
+                    <a href="#" class="btn btn-to-modal" data-modal="aboutInfo">Читать далее</a>
+                    <a href="#" class="btn btn-to-modal" data-modal="contactInfo">Связаться</a>
+                </div>
+            </article>
+        </section>
+        <section class="section section-products">
+            <h1 class="section-products-h1 heading" id="products">Услуги</h1>
+            <p class="section-products-p">Предлагаю следующие услуги для физических и юридических лиц</p>
+            <div class="accordion">
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Уголовное право</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Уголовные дела</li>
+                            <li class="accordion-list-item">&#10003;  Апелляция, кассация, надзор </li>
+                            <li class="accordion-list-item">&#10003; Поведение при допросе </li>
+                            <li class="accordion-list-item">&#10003; Обжалование приговора </li>
+                            <li class="accordion-list-item">&#10003; Изменение меры пресечения </li>
+                            <li class="accordion-list-item">&#10003; Возбуждение уголовного дела против несовершеннолетнего </li>
+                            <li class="accordion-list-item">&#10003; Обжалование отказа возбуждения уголовного дела.</li>
+                            <li class="accordion-list-item">&#10003; Пересмотр судебных решений и приговоров</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Наследство</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Оформление наследства</li>
+                            <li class="accordion-list-item">&#10003; Наследство на имущество</li>
+                            <li class="accordion-list-item">&#10003; Вступление в наследование</li>
+                            <li class="accordion-list-item">&#10003; Оспаривание наследства через суд</li>
+                            <li class="accordion-list-item">&#10003; Обязательная доля</li>
+                            <li class="accordion-list-item">&#10003; Наследство супруга</li>
+                            <li class="accordion-list-item">&#10003; Отказ от наследства</li>
+                            <li class="accordion-list-item">&#10003; Признание завещания недействительным</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Трудовые споры</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Взыскание долга по зарплате</li>
+                            <li class="accordion-list-item">&#10003; Восстановление по работе</li>
+                            <li class="accordion-list-item">&#10003; Увольнение работника</li>
+                            <li class="accordion-list-item">&#10003; Сокращение штата</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Семейное право</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Расторжение брака</li>
+                            <li class="accordion-list-item">&#10003; Оспаривание отцовства</li>
+                            <li class="accordion-list-item">&#10003; Выделение супружеской доли</li>
+                            <li class="accordion-list-item">&#10003; Признание брака недействительным</li>
+                            <li class="accordion-list-item">&#10003; Расторжение брака через суд</li>
+                            <li class="accordion-list-item">&#10003; Раздел имущества супругов</li>
+                            <li class="accordion-list-item">&#10003; Составление брачного договора</li>
+                            <li class="accordion-list-item">&#10003; Взыскание алиментов</li> 
+                            <li class="accordion-list-item">&#10003; Установление факта родственных отношений</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Жилищные споры</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Выселение из квартиры</li>
+                            <li class="accordion-list-item">&#10003; Служебное жилье в Москве</li>
+                            <li class="accordion-list-item">&#10003; Приватизация жилья</li>
+                            <li class="accordion-list-item">&#10003; Выделение доли</li>
+                            <li class="accordion-list-item">&#10003; Собственность через суд</li>
+                            <li class="accordion-list-item">&#10003; Выселение из квартиры собственником</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Помощь при ДТП</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Возмещение ущербы по ДТП</li>
+                            <li class="accordion-list-item">&#10003; Споры с ГИБДД</li>
+                            <li class="accordion-list-item">&#10003; Судебные дела по ДТП</li>
+                            <li class="accordion-list-item">&#10003; Возврат водительских прав</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Взыскание долгов</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Взыскание по договору аренды</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору оказания услуг</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору займа</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору лизинга</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору найма помещение</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору подряда</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по договору хранения</li>
+                            <li class="accordion-list-item">&#10003; Взыскание по кредитному договору</li> 
+                            <li class="accordion-list-item">&#10003; Взыскание по алиментам</li> 
+                            <li class="accordion-list-item">&#10003; Взыскание по договору поставки</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Возмещение вреда</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Возмещение ущерба при ДТП</li>
+                            <li class="accordion-list-item">&#10003; Возмещение ущерба по ОСАГО</li>
+                            <li class="accordion-list-item">&#10003; Возмещение ущерба по КАСКО</li>
+                            <li class="accordion-list-item">&#10003; Возмещение морального ущерба</li>
+                            <li class="accordion-list-item">&#10003; Возмещение материального ущерба</li>
+                            <li class="accordion-list-item">&#10003; Возмещение ущерба здоровью</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Гражданские дела</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Защита прав потребителей</li>
+                            <li class="accordion-list-item">&#10003; Неосновательное обогащение</li>
+                            <li class="accordion-list-item">&#10003; Возмещение ущерба по КАСКО</li>
+                            <li class="accordion-list-item">&#10003; Защита авторских и смежных прав</li> 
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Административные дела</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Жалоба на действия государственного органа</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Юридическим лицам</h3>
+                    <div class="accordion-item-body">
+                        <ul class="accordion-item-body-content">
+                            <li class="accordion-list-item">&#10003; Банкротство юридического лица или ИП</li>
+                            <li class="accordion-list-item">&#10003; Арбитражные споры</li>
+                            <li class="accordion-list-item">&#10003; Оспаривание правовых актов</li>
+                            <li class="accordion-list-item">&#10003; Исполнительное производство</li>
+                            <li class="accordion-list-item">&#10003; Исковое заявление в арбитраж</li>
+                            <li class="accordion-list-item">&#10003; Образец фальсификации доказательств</li>
+                            <li class="accordion-list-item">&#10003; Восстановление сроков обжалования</li>
+                            <li class="accordion-list-item">&#10003; Хозяйственные споры</li> 
+                            <li class="accordion-list-item">&#10003; Компенсация ущерба</li> 
+                            <li class="accordion-list-item">&#10003; Защита деловой репутации</li> 
+                            <li class="accordion-list-item">&#10003; Споры со страховым компаниями</li> 
+                            <li class="accordion-list-item">&#10003; Споры по строительному подряду</li> 
+                            <li class="accordion-list-item">&#10003; Корпоративные споры</li> 
+                            <li class="accordion-list-item">&#10003; Трудовое право для бизнеса</li> 
+                            <li class="accordion-list-item">&#10003; Услуга "удаленный юрист"</li> 
+                            <li class="accordion-list-item">&#10003; Уголовные споры</li> 
+                            <li class="accordion-list-item">&#10003; Гражданские споры </li> 
+                            <li class="accordion-list-item">&#10003; Признание торгов недействительными </li> 
+                            <li class="accordion-list-item">&#10003; Взыскание дебиторской задолженности</li> 
+                            <li class="accordion-list-item">&#10003; Защита чести и достоинства</li> 
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="modal">
+            <div class="modal__main">
+                <button class="modal-close-btn">&#10006;</button>
+                <div class="modal-content">
+                    <h2 class="modal-title">Модальное окно</h2>
+                    <div class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum adipisci placeat laboriosam quo a aspernatur, repellat praesentium molestiae consequatur deserunt ullam quisquam quae error molestias maiores cupiditate ex ipsam.
+                    Nemo ipsa maxime accusantium modi facilis blanditiis ipsum hic dolorem vero ipsam, aliquam atque nihil quis adipisci repudiandae expedita vel totam consectetur, temporibus, recusandae rerum? Illo qui laudantium quisquam sunt!
+                    Excepturi quis quae sapiente quibusdam optio cum eos omnis ea, voluptatum possimus tenetur at ullam? Porro fugit sint quia ipsum illo quos hic animi error, eum, minus, beatae harum sit.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
