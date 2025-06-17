@@ -28,6 +28,7 @@ body{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid white;
+    z-index: 1000;
 }
 
 .logo-text{
