@@ -174,7 +174,7 @@ body{
 
 .btn:hover,
 .btn:focus{
-    background-color: #222;
+    background-image: linear-gradient(rgb(83, 83, 83), black);
 }
 
 .modal{
