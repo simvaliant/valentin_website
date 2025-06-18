@@ -41,6 +41,8 @@ function fillModalContent(contentName) {
 document.addEventListener('click', (event) => {
     if(event.target.classList.contains('btn-to-modal')){
 
+        event.preventDefault();
+
         openModal();
 
         const modalName = event.target.dataset.modal;
@@ -133,18 +135,54 @@ function displayNews(news) {
   const container = document.getElementById('news-container');
   container.innerHTML = '';
 
-  news.forEach((item) => {
+  news.forEach((item, index) => {
+    
+    modalContents.push({
+      name: `news-${index}`,
+      title: item.title,
+      text: item.text
+    });
+
     const newsItem = document.createElement('div');
     newsItem.classList.add('news-item');
 
     newsItem.innerHTML = `
-      <h3 class="news-item-title">${item.title}</h3>
-      <small class="news-item-date">${item.date}</small>
-      <p class="news-item-text">${item.text.replace(/\n/g, '<br>')}</p>
+      <div class="news-item-container">
+            <h3 class="news-item-title">${item.title}</h3>
+            <small class="news-item-date">${item.date}</small>
+      </div> 
+      <a href="#" class="btn btn-to-modal" data-modal="news-${index}">Читать</a>
     `;
 
     container.appendChild(newsItem);
+    console.log(modalContents)
   });
 }
 loadNews();
 
+
+
+
+
+
+
+// function displayNews(news) {
+//   const container = document.getElementById('news-container');
+//   container.innerHTML = '';
+
+//   news.forEach((item) => {
+
+//     const newsItem = document.createElement('div');
+//     newsItem.classList.add('news-item');
+
+//     newsItem.innerHTML = `
+//       <h3 class="news-item-title">${item.title}</h3>
+//       <small class="news-item-date">${item.date}</small>
+//       <p class="news-item-text">${item.text.replace(/\n/g, '<br>')}</p>
+//     `;
+
+//     container.appendChild(newsItem);
+//     console.log(modalContents)
+//   });
+// }
+// loadNews();

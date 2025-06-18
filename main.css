@@ -13,7 +13,6 @@ html{
 }
 
 body{
-    min-height: 300vh;
     background-image: linear-gradient(rgba(171, 137, 82, 0.495), black);
     background-image: url('./assets/pics/backdrop.webp');
     background-size: contain;
@@ -370,11 +369,31 @@ body{
     margin-top: 3rem;
 }
 
+.section-news .heading{
+    text-align: center;
+}
+
+.section-news-p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 .news-container{
-    width: 90%;
+    margin-top: 3rem;
+    width: 99%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+.news-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item .btn{
+    max-height: 50px;
 }
 
 .news-item-title{
@@ -389,6 +408,8 @@ body{
 .news-item-text{
     font-size: 1.2rem;
 }
+
+
 
 
 
