@@ -105,3 +105,46 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 })
 
 
+const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRaHFLDow1NpupZSxECA2UMpPM9awtTN6zYRIxVqe6PCbSUrpTUHqzAtTchyNbO6ytMZkbxnB6SKSWq/pub?output=csv';
+
+async function loadNews() {
+  try {
+    const timestamp = Date.now();
+    const response = await fetch(`${csvUrl}&t=${timestamp}`);
+    const csvText = await response.text();
+    const news = parseCSV(csvText);
+    displayNews(news);
+  } catch (error) {
+    document.getElementById('news-container').innerText = 'Ошибка загрузки новостей';
+    console.error('Ошибка при загрузке CSV:', error);
+  }
+}
+
+function parseCSV(csvText) {
+  const parsed = Papa.parse(csvText, {
+    header: true,
+    skipEmptyLines: true,
+  });
+
+  return parsed.data;
+}
+
+function displayNews(news) {
+  const container = document.getElementById('news-container');
+  container.innerHTML = '';
+
+  news.forEach((item) => {
+    const newsItem = document.createElement('div');
+    newsItem.classList.add('news-item');
+
+    newsItem.innerHTML = `
+      <h3 class="news-item-title">${item.title}</h3>
+      <small class="news-item-date">${item.date}</small>
+      <p class="news-item-text">${item.text.replace(/\n/g, '<br>')}</p>
+    `;
+
+    container.appendChild(newsItem);
+  });
+}
+loadNews();
+
