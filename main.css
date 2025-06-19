@@ -409,6 +409,44 @@ body{
     font-size: 1.2rem;
 }
 
+.footer{
+    width: 100%;
+    height: 90px;
+    padding: 1rem 0;
+    background-image: linear-gradient(#333, black);
+    color: rgb(174, 174, 174);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title{
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, rgb(174, 174, 174), transparent) 1;
+}
+
+.social-icons{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons .link-icon i{
+    font-size: 1.5rem;
+    color: rgb(174, 174, 174);
+}
+
+.social-icons .link-icon i:hover,
+.social-icons .link-icon i:focus{
+    transform: translateY(-3px);
+    color: #f1f1f1;
+    transition: all 0.3s ease-in-out;
+}
+
 
 
 
