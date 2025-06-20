@@ -95,7 +95,7 @@ body.modal-open {
 
 .navbar-mobile{
     position: fixed;
-    top: 5.7rem;
+    top: 4.7rem;
     left:0;
     width: 100%;
     background-color: hsla(0, 0%, 20%, 0.802);
