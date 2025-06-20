@@ -135,7 +135,7 @@ body.modal-open {
     margin: 2rem 5% 2rem 5%;
     padding: 3rem 3%;
     border-radius: 12px;
-    box-shadow: 10px 5px 5px hsla(0, 0%, 20%, 0.468);
+    box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.468);
 }
 
 .heading{
@@ -147,7 +147,7 @@ body.modal-open {
 
 /* HERO-SECTION-STYLES */
 
-.hero-section{
+.hero-section{ 
     margin-top: 10rem;
     display: flex;
     justify-content: space-around;
@@ -159,7 +159,7 @@ body.modal-open {
     height: 400px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.468);
+    box-shadow: 1px 1px 5px black;
 }
 
 .hero-pic-img{
@@ -330,7 +330,7 @@ body.modal-open {
     margin: 1rem 0;
     border: 2px solid black;
     border-radius: 12px;
-    box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.468);
+    box-shadow: 3px 3px 5px hsla(0, 1%, 31%, 0.468);
 }
 
 .accordion-item-header{
@@ -498,27 +498,36 @@ body.modal-open {
 
 @media only screen and (max-width: 590px){
 
+    #side-header{
+        transform: translateY(0); 
+        transition: transform 0.8s ease-in-out;
+    }
+
+    #site-header.hide {
+        transform: translateY(-100%);
+        transition: transform 0.8s ease-in-out;
+    }
+
     .logo-text{
         font-size: 1.5rem;
     }
 
     .section{
-        padding: 2rem 5%;
+        padding: 5% 5%;
     }
 
     .hero-section{
         flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+        align-items: start;
+        gap: 1rem;
         margin-top: 7rem;
     }
 
     .hero-pic-wrapper{
        width: 65vw;
-       height: auto;
-       border: none;
-       border-radius: 0;
-       box-shadow: none;
+       height: 65vw;
+       border-radius: 12px;
+       box-shadow: 1px 1px 5px rgb(70, 69, 69);
     }
 
     .hero-text{
@@ -612,7 +621,7 @@ body.modal-open {
 
     .hero-section{
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         gap: 2rem;
         margin-top: 7rem;
         padding: 2rem 5%;
@@ -620,15 +629,15 @@ body.modal-open {
 
     .hero-pic-wrapper{
        border: none;
-       box-shadow: none;
+       box-shadow: 1px 1px 5px rgb(70, 69, 69);
     }
 
     .accordion{
-        width: 99%;
+        width: 60%;
     }
 
     .section-products-extra{
-        display: none;
+        font-size: 0.8rem;
     }
 
     .news-item{
@@ -640,9 +649,9 @@ body.modal-open {
 
     .hero-pic-wrapper{
         width: 32vw;
-        height: auto;
+        height: 32vw;
         border: none;
-        box-shadow: none;
+        box-shadow: 1px 1px 5px rgb(70, 69, 69);
     }
 
     .hero-text{

@@ -17,6 +17,24 @@ document.addEventListener('click', (event) => {
 });
 
 
+let lastScroll = 0;
+const header = document.getElementById('site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Прокрутка вниз
+    header.classList.add('hide');
+  } else {
+    // Прокрутка вверх
+    header.classList.remove('hide');
+  }
+
+  lastScroll = currentScroll;
+});
+
+
 const modal = document.querySelector('.modal');
 const modalMain = document.querySelector('.modal__main');
 const modalContent = document.querySelector('.modal-content');
@@ -92,7 +110,7 @@ const modalContents = [
         name: 'aboutInfo',
         title: 'Информация обо мне',
         text: `
-        <p class="info-text-p">Немного информации обо мне, чтобы у Вам было проще принять решение о сотрудничестве:</p>
+        <p class="info-text-p">Немного информации обо мне, чтобы Вам было проще принять решение о сотрудничестве:</p>
         <hr>
         <p class="info-text-p">Первоначально обучался по классической гуманитарной системе в Православном Свято-Тихоновском Гуманитарном Университете по направлениям "История" и "Теология", получив степень магистра истории. Далее изучал право, и, уже будучи дипломированным юристом, занялся частной адвокатской практикой.
         </p>
