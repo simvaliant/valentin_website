@@ -17,24 +17,6 @@ document.addEventListener('click', (event) => {
 });
 
 
-let lastScroll = 0;
-const header = document.getElementById('site-header');
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScroll && currentScroll > 50) {
-    // Прокрутка вниз
-    header.classList.add('hide');
-  } else {
-    // Прокрутка вверх
-    header.classList.remove('hide');
-  }
-
-  lastScroll = currentScroll;
-});
-
-
 const modal = document.querySelector('.modal');
 const modalMain = document.querySelector('.modal__main');
 const modalContent = document.querySelector('.modal-content');

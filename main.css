@@ -502,16 +502,6 @@ body.modal-open {
         padding: 1rem 5%;
     }
 
-    #side-header{
-        transform: translateY(0); 
-        transition: transform 0.8s ease-in-out;
-    }
-
-    #site-header.hide {
-        transform: translateY(-100%);
-        transition: transform 0.8s ease-in-out;
-    }
-
     .logo-text{
         font-size: 1.5rem;
     }
