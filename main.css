@@ -189,6 +189,10 @@ body.modal-open {
     gap: 1rem;
 }
 
+.info-text-p{
+    padding: 0.5rem 0;
+}
+
 
 /* MODALS STYLES */
 
