@@ -583,6 +583,10 @@ body.modal-open {
         padding: 3rem 1%;
     }
 
+    .section-news-p{
+        padding: 0 1rem;
+    }
+
     .news-item{
         width: 100%;
     }
