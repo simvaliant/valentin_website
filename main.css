@@ -82,7 +82,6 @@ body.modal-open {
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-color: white;
-    transition: 0.3s;
 }
 
 #burger-menu{
@@ -91,6 +90,11 @@ body.modal-open {
     font-size: 2.5rem;
     border: none;
     display: none;
+    transition: transform 0.3s ease;
+}
+
+#burger-menu.bx-x {
+  transform: rotate(90deg);
 }
 
 .navbar-mobile{
@@ -100,11 +104,17 @@ body.modal-open {
     width: 100%;
     background-color: hsla(0, 0%, 20%, 0.802);
     z-index: 10;
-    display: none;
+    
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navbar-mobile-active{
-    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .navbar-mobile .nav-list{
@@ -131,7 +141,7 @@ body.modal-open {
 /* GENERAL SECTION STYLES */
 
 .section{
-    background-color: white;
+    background-color: whitesmoke;
     margin: 2rem 5% 2rem 5%;
     padding: 3rem 3%;
     border-radius: 12px;
@@ -175,6 +185,7 @@ body.modal-open {
 
 .hero-text-h2{
     font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .hero-text-h3{
@@ -312,8 +323,6 @@ body.modal-open {
 
 .contact-info-item a:hover{
     color: hsla(0, 0%, 20%, 0.67);
-    text-decoration: underline;
-    text-decoration-color: hsla(0, 0%, 20%, 0.67);
     text-underline-offset: 5px;
 }
 
@@ -431,7 +440,7 @@ body.modal-open {
 }
 
 .news-item:hover{
-    background-color: whitesmoke;
+    background-color: rgb(236, 235, 235);
     transition: all 0.3s ease-in-out;
 }
 
@@ -457,7 +466,7 @@ body.modal-open {
 
 .footer{
     width: 100%;
-    height: 90px;
+    height: auto;
     padding: 1rem 0;
     background-image: linear-gradient(#333, black);
     color: rgb(174, 174, 174);
@@ -470,19 +479,20 @@ body.modal-open {
 .footer-title{
     font-size: 0.8rem;
     font-weight: normal;
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid;
+    margin-bottom: 1rem;
     border-image: linear-gradient(to right, transparent, rgb(174, 174, 174), transparent) 1;
 }
 
 .social-icons{
-    width: 70px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
 }
 
 .social-icons .link-icon i{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgb(174, 174, 174);
 }
 

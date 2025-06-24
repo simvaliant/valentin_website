@@ -158,27 +158,55 @@ function displayNews(news) {
   const container = document.getElementById('news-container');
   container.innerHTML = '';
 
+  const maxVisible = 5;
+
   news.forEach((item, index) => {
-    
     modalContents.push({
       name: `news-${index}`,
       title: item.title,
-      text: item.text
+      text: item.text.replace(/\n/g, '<br>')
     });
 
     const newsItem = document.createElement('div');
     newsItem.classList.add('news-item');
 
+    // Скрываем новости после 5-й
+    if (index >= maxVisible) {
+      newsItem.classList.add('hidden-news');
+      newsItem.style.display = 'none';
+    }
+
     newsItem.innerHTML = `
       <div class="news-item-container">
-            <h3 class="news-item-title">${item.title}</h3>
-            <small class="news-item-date">${item.date}</small>
+        <h3 class="news-item-title">${item.title}</h3>
+        <small class="news-item-date">${item.date}</small>
       </div> 
       <a href="#" class="btn btn-to-modal" data-modal="news-${index}">Читать</a>
     `;
 
     container.appendChild(newsItem);
   });
+
+  // Добавляем кнопку, если новостей больше 5
+  if (news.length > maxVisible) {
+    const showMoreBtn = document.createElement('button');
+    showMoreBtn.textContent = 'Показать все';
+    showMoreBtn.classList.add('btn');
+
+    let expanded = false;
+
+    showMoreBtn.onclick = () => {
+      const hiddenItems = container.querySelectorAll('.hidden-news');
+      hiddenItems.forEach(item => {
+        item.style.display = expanded ? 'none' : 'flex';
+      });
+
+      showMoreBtn.textContent = expanded ? 'Показать все' : 'Скрыть';
+      expanded = !expanded;
+    };
+
+    container.appendChild(showMoreBtn);
+  }
 }
 loadNews();
 
