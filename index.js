@@ -1,34 +1,43 @@
 const burgerBtn = document.querySelector('#burger-menu');
 const navMobile = document.querySelector('.navbar-mobile');
+const overlay = document.querySelector('.main-overlay');
 
-burgerBtn.onclick = (event) => {
-    event.stopPropagation();
-    burgerBtn.classList.toggle('bx-x');
-    navMobile.classList.toggle('navbar-mobile-active');
+function toggleMenu(open) {
+  burgerBtn.classList.toggle('bx-x', open);
+  navMobile.classList.toggle('navbar-mobile-active', open);
 
-    if(navMobile.classList.contains('navbar-mobile-active')){
-      document.querySelector('.main-overlay').style.cssText = `
+  if (open) {
+    overlay.style.cssText = `
       visibility: visible;
       opacity: 1;
       transition: all 0.5s ease;
       pointer-events: none;
-      background-color: hsla(0, 0%, 0%, 0.600);
+      background-color: hsla(0, 0%, 0%, 0.700);
       position: fixed;
       inset: 0;
-      `
-    } else {
-      document.querySelector('.main-overlay').style.cssText = ``;
-    }
+    `;
+  } else {
+    overlay.style.cssText = ``;
+  }
 }
 
-document.addEventListener('click', (event) => {
-    const isClickInside = burgerBtn.contains(event.target) || navMobile.contains(event.target);
+burgerBtn.onclick = (event) => {
+  event.stopPropagation();
+  const isMenuOpen = navMobile.classList.contains('navbar-mobile-active');
+  toggleMenu(!isMenuOpen);
+};
 
-    if (!isClickInside) {
-        burgerBtn.classList.remove('bx-x');
-        navMobile.classList.remove('navbar-mobile-active');
-        document.querySelector('.main-overlay').style.cssText = ``;
-    }
+document.addEventListener('click', (event) => {
+  const isClickInside = burgerBtn.contains(event.target) || navMobile.contains(event.target);
+  if (!isClickInside) {
+    toggleMenu(false);
+  }
+});
+
+document.querySelectorAll('.navbar-mobile a').forEach(link => {
+  link.addEventListener('click', () => {
+    toggleMenu(false);
+  });
 });
 
 

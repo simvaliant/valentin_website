@@ -57,13 +57,13 @@ body.modal-open {
     box-shadow: 0 0 0 white;
   }
   25% {
-    box-shadow: 0 0 5px white;
-  }
-  50% {
     box-shadow: 0 0 10px white;
   }
+  50% {
+    box-shadow: 0 0 20px white;
+  }
   75% {
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 10px white;
   }
   100% {
     box-shadow: 0 0 0 white;
@@ -252,17 +252,13 @@ body.modal-open {
     align-items: center;
 }
 
-.hero-pic-wrapper{
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 1px 1px 5px black;
-}
-
-.hero-pic-img{
-    width: 100%;
-    height: 100%;
+.photo-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .hero-text{
@@ -800,18 +796,21 @@ body.modal-open {
         line-height: 1.1;
     }
 
+    .section-pic-container{
+        height: 20vh;
+    }
+
     .section-pic-container-about{
-        height: 50vh;
+        height: 60vh;
+    }
+
+    .section-pic-overlay{
+        height: 15vh;
     }
 
     .hero-text{
         padding: 0;
         width: 300px;
-    }
-
-    .hero-pic-wrapper{
-       border: none;
-       box-shadow: 1px 1px 5px rgb(70, 69, 69);
     }
 
     .accordion{
@@ -835,21 +834,64 @@ body.modal-open {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1312px){
+@media (min-width: 590px) and (max-width: 992px) and (orientation: landscape) {
 
-    .hero-pic-wrapper{
-        width: 32vw;
-        height: 32vw;
-        border: none;
-        box-shadow: 1px 1px 5px rgb(70, 69, 69);
+    .hero-text-h3{
+        font-size: 1rem;
+        margin-bottom: 1rem;
     }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .section-pic-container{
+        height: 30vh;
+    }
+
+    .section-pic-container-about{
+        height: 60vh;
+    }
+
+    .section-pic-overlay{
+        height: 25vh;
+        justify-content: center;
+    }
+
+    .section-pic-container-about .section-pic-overlay{
+        height: 25vh;
+    }
+
+    .section-products-h1{
+        font-size: 1.5rem;
+    }
+
+    .section-products-p{
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1312px){
 
     .hero-text{
         width: 350px;
     }
 
+    .section-pic-container{
+        height: 20vh;
+    }
+
     .section-pic-container-about{
-        height: 70vh;
+        height: 50vh;
+    }
+
+    .section-pic-overlay{
+        height: 15vh;
+    }
+
+    .section-pic-container-about .section-pic-overlay{
+        height: 15vh;
     }
 
     .section-products-extra{
