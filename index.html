@@ -14,6 +14,7 @@
         <div class="logo-container">
             <h1 class="logo-text">Адвокат Борисов</h1>
         </div>
+        <a href="#" class="btn-to-modal" id="quick-contact-btn" data-modal="contactInfo"><i class='bx bx-phone'></i></a>
         <i class='bxr  bx-menu-right'  id="burger-menu"></i>
         
         <nav class="navbar">
@@ -32,15 +33,15 @@
         </nav>   
     </header>
     <main class="main">
+        <div class="main-overlay"></div>
         <section class="section hero-section">
-            <article class="hero-pic">
-                <div class="hero-pic-wrapper">
-                    <img src="./assets/pics/aboutphoto.jpg" alt="profile pic" class="hero-pic-img">
+            <div class="section-pic-container section-pic-container-about">
+                <div class="section-pic-overlay">
+                    <h2 class="hero-text-h2">Приветствую Вас!</h2>
+                    <h1 class="hero-text-h1 heading">Я Валентин Валерьевич Борисов</h1>
                 </div>
-            </article>
+            </div>
             <article class="hero-text">
-                <h2 class="hero-text-h2">Приветствую Вас!</h2>
-                <h1 class="hero-text-h1 heading">Я Валентин Валерьевич Борисов</h1>
                 <h3 class="hero-text-h3">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</h3>
                 <div class="hero-btn-group">
                     <a href="#" class="btn btn-to-modal" data-modal="aboutInfo">Читать далее</a>
@@ -49,8 +50,12 @@
             </article>
         </section>
         <section class="section section-products">
-            <h1 class="section-products-h1 heading" id="products">Услуги</h1>
-            <p class="section-products-p">Предлагаю следующие услуги для физических и юридических лиц</p>
+            <div class="section-pic-container">
+                <div class="section-pic-overlay">
+                    <h1 class="section-products-h1 heading" id="products">Услуги</h1>
+                    <p class="section-products-p">Предлагаю следующие услуги для физических и юридических лиц</p>
+                </div>
+            </div>
             <div class="section-products-wrapper">
                 <div class="accordion">
                 <article class="accordion-item">
@@ -236,8 +241,12 @@
             </div>
         </section>
         <section class="section-news section">
-            <h1 class="section-news-h1 heading" id="news">Новости и практика</h1>
-            <p class="section-news-p">Случаи из практики, мини-обзоры на законодательные новшества и другое</p>
+            <div class="section-pic-container section-pic-container-two">
+                <div class="section-pic-overlay">
+                    <h1 class="section-news-h1 heading" id="news">Новости и практика</h1>
+                    <p class="section-news-p">Случаи из практики, мини-обзоры на законодательные новшества и другое</p>
+                </div>
+            </div>
             <div id="news-container" class="news-container">Загрузка новостей...</div>
         </section>
     </main>

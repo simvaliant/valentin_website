@@ -5,6 +5,20 @@ burgerBtn.onclick = (event) => {
     event.stopPropagation();
     burgerBtn.classList.toggle('bx-x');
     navMobile.classList.toggle('navbar-mobile-active');
+
+    if(navMobile.classList.contains('navbar-mobile-active')){
+      document.querySelector('.main-overlay').style.cssText = `
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.5s ease;
+      pointer-events: none;
+      background-color: hsla(0, 0%, 0%, 0.600);
+      position: fixed;
+      inset: 0;
+      `
+    } else {
+      document.querySelector('.main-overlay').style.cssText = ``;
+    }
 }
 
 document.addEventListener('click', (event) => {
@@ -13,6 +27,7 @@ document.addEventListener('click', (event) => {
     if (!isClickInside) {
         burgerBtn.classList.remove('bx-x');
         navMobile.classList.remove('navbar-mobile-active');
+        document.querySelector('.main-overlay').style.cssText = ``;
     }
 });
 
@@ -33,6 +48,7 @@ function openModal() {
 function closeModal() {
     document.body.classList.remove('modal-open');
     modal.classList.remove('active');
+    document.querySelector('.main-overlay').style.cssText = ``;
 }
 
 function fillModalContent(contentName) {
@@ -93,19 +109,19 @@ const modalContents = [
         title: 'Информация обо мне',
         text: `
         <p class="info-text-p">Немного информации обо мне, чтобы Вам было проще принять решение о сотрудничестве:</p>
-        <hr>
+        
         <p class="info-text-p">Первоначально обучался по классической гуманитарной системе в Православном Свято-Тихоновском Гуманитарном Университете по направлениям "История" и "Теология", получив степень магистра истории. Далее изучал право, и, уже будучи дипломированным юристом, занялся частной адвокатской практикой.
         </p>
-        <hr>
+        
         <p class="info-text-p">В отличии от многих коллег, пришедших в адвокатуру после работы в следственных органах и привыкших смотреть на окружающих с позиции обвинения, я сpазу же после обучения стaл защитником, и именнo пoэтoму у меня отсутствует прoфдефоpмация в виде нeдовepия к словaм клиeнта и зaвeдомaя установка в гoловe пo т.н. "обвинитeльному уклoну".
         </p>
-        <hr>
+        
         <p class="info-text-p">Для мeня "пpeзумпция дoстовepноcти" свeдений, пoлученных от доверителя, не пустой звук, поэтому я погружаюсь в стратегию защиты с головой, работая с полной отдачей. Если Вам нужен адвокат с незапятнанной и надежной репутацией, которому можно довериться, то Вы обратились по адресу.
         </p>
-        <hr>
+        
         <p class="info-text-p">Помогу оценить целесообразность обращения в судебные органы, защитить Ваши интересы в ходе судебного разбирательства. Моя деятельность направлена на оказание реальной юридической помощи, чего не сказать о многочисленных юридических фирмах, которые "раздувают" из Вашего обращения глобальную проблему.
         </p>
-        <hr>
+        
         <p class="info-text-p">Не берусь за те дела, которые считаю безнадежными. Если Ваша проблема действительно нерешаема или результат может быть неоднозначным, мой долг – честно сказать Вам об этом.</p>
         `,
     },
@@ -170,7 +186,6 @@ function displayNews(news) {
     const newsItem = document.createElement('div');
     newsItem.classList.add('news-item');
 
-    // Скрываем новости после 5-й
     if (index >= maxVisible) {
       newsItem.classList.add('hidden-news');
       newsItem.style.display = 'none';
@@ -187,11 +202,10 @@ function displayNews(news) {
     container.appendChild(newsItem);
   });
 
-  // Добавляем кнопку, если новостей больше 5
   if (news.length > maxVisible) {
     const showMoreBtn = document.createElement('button');
     showMoreBtn.textContent = 'Показать все';
-    showMoreBtn.classList.add('btn');
+    showMoreBtn.classList.add('show-more-btn');
 
     let expanded = false;
 
