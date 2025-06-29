@@ -208,8 +208,6 @@ body.modal-open {
 
 .section-pic-container-about{
     background-image: url('./assets/pics/aboutphoto.jpg');
-    
-    overflow: hidden;
     height: 75vh;
     border-radius: 0;
     justify-content: end;
@@ -240,7 +238,7 @@ body.modal-open {
     font-family: 'Merriweather', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
-    scroll-margin-block-start: 800px;
+    scroll-margin-block-start: 190px !important;
 }
 
 
