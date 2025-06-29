@@ -229,8 +229,8 @@ body.modal-open {
 }
 
 .section-pic-container-about .section-pic-overlay{
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px); 
+    /* backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);  */
     height: 20vh;
     padding: 1rem;
     justify-content: center;
