@@ -160,7 +160,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   e.preventDefault();
 
   const token = "7251102638:AAGN0D8wn8a9UVKPzfRoK6OWvcrYSqzEUZg";
-  const chatId = "1048105536";
+  const chatId = "5156457911";
 
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
