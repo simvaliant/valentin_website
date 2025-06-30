@@ -155,6 +155,57 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 })
 
 
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const token = "7251102638:AAGN0D8wn8a9UVKPzfRoK6OWvcrYSqzEUZg";
+  const chatId = "1048105536";
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const contactMethod = document.getElementById("contact-method").value;
+  const message = document.getElementById("message").value;
+
+  const text = `
+🔔 Новая заявка с сайта:
+
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+✉️ Email: ${email}
+📬 Предпочтительный способ связи: ${contactMethod}
+📝 Комментарий:
+${message}
+  `;
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: text,
+    }),
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("Заявка успешно отправлена!");
+        document.getElementById("contact-form").reset();
+      } else {
+        alert("Ошибка при отправке. Попробуйте позже.");
+      }
+    })
+    .catch(error => {
+      console.error("Ошибка:", error);
+      alert("Ошибка соединения.");
+    });
+});
+
+
+
+
+
+
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRaHFLDow1NpupZSxECA2UMpPM9awtTN6zYRIxVqe6PCbSUrpTUHqzAtTchyNbO6ytMZkbxnB6SKSWq/pub?output=csv';
 
 async function loadNews() {

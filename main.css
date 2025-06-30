@@ -41,7 +41,7 @@ body.modal-open {
 #quick-contact-btn{
     color: white;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 12px;
     padding: 0.25rem 2rem;
     transition: box-shadow 0.3s ease;
@@ -71,7 +71,10 @@ body.modal-open {
 }
 
 .btn:hover,
-.btn:focus{
+.btn:focus,
+#quick-contact-btn:hover,
+#quick-contact-btn:focus
+{
     background-image: linear-gradient(rgb(83, 83, 83), black);
 }
 
@@ -209,7 +212,7 @@ body.modal-open {
 
 .section-pic-container-about{
     background-image: url('./assets/pics/aboutphoto.jpg');
-    height: 75vh;
+    height: 55vh;
     border-radius: 0;
     justify-content: end;
 }
@@ -293,6 +296,24 @@ body.modal-open {
 
 .info-text-p{
     padding: 0.5rem 0;
+}
+
+.contact-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 

@@ -38,7 +38,7 @@
         <div class="main-overlay"></div>
         <section class="section hero-section">
             <figure class="photo-hidden" aria-hidden="true">
-                <img src="./assets/pics/aboutphoto.jpg" alt="Адвокат Борисов" loading="lazy">
+                <img src="./assets/pics/aboutphoto.jpg" alt="Адвокат Борисов фото" loading="lazy">
             </figure>
             <div class="section-pic-container section-pic-container-about">
                 <div class="section-pic-overlay">
@@ -49,10 +49,40 @@
             <article class="hero-text">
                 <h3 class="hero-text-h3">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</h3>
                 <div class="hero-btn-group">
-                    <a href="#" class="btn btn-to-modal" data-modal="aboutInfo">Читать далее</a>
+                    <a href="#" class="btn btn-to-modal" data-modal="aboutInfo">Обо мне</a>
                     <a href="#" class="btn btn-to-modal" data-modal="contactInfo">Связаться <i class='bx bx-phone'></i></a>
                 </div>
             </article>
+        </section>
+        <section class="section">
+            <h3 class="accordion-item-header">Оставьте заявку, и я свяжусь с Вами</h3>
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+                             <form class="contact-form" id="contact-form">
+                                <label for="name">Как к Вам обращаться:</label>
+                                <input type="text" id="name" name="name" required placeholder="Например, Иван">
+
+                                <label for="phone">Телефон для связи:</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+
+                                <label for="email">Электронная почта:</label>
+                                <input type="email" id="email" name="email" placeholder="example@mail.ru">
+
+                                <label for="contact-method">Предпочтительный способ связи:</label>
+                                <select id="contact-method" name="contact-method" required>
+                                    <option value="">-- выберите --</option>
+                                    <option value="call">Звонок</option>
+                                    <option value="messenger">Сообщение в мессенджере</option>
+                                    <option value="email">Письмо на почту</option>
+                                </select>
+
+                                <label for="message">Комментарий или описание ситуации:</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Кратко опишите Вашу ситуацию"></textarea>
+
+                                <button type="submit" class="btn">Отправить заявку</button>
+                            </form>
+                        </div>
+                    </div>
         </section>
         <section class="section section-products">
             <div class="section-pic-container" id="products">
