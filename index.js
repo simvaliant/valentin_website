@@ -41,6 +41,26 @@ document.querySelectorAll('.navbar-mobile a').forEach(link => {
 });
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      e.preventDefault();
+      const topOffset = 160;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - topOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
 const modal = document.querySelector('.modal');
 const modalMain = document.querySelector('.modal__main');
 const modalContent = document.querySelector('.modal-content');
@@ -135,6 +155,30 @@ const modalContents = [
         `,
     },
 ]
+
+
+const quickContactBtn = document.getElementById('quick-contact-btn');
+const contactIcon = quickContactBtn.firstElementChild;
+const contactIcons = [`<i class='bx bx-phone'></i>`, `<i class='bx bxl-whatsapp' ></i>`, `<i class='bx bxl-telegram' ></i>`, `<i class='bx bx-envelope'></i>`];
+
+function wait(ms){
+  return new Promise(resolve => {
+    setTimeout(resolve, ms);
+  })
+}
+
+async function changeIcons(){
+  while(true){
+    for(let i = 0; i < contactIcons.length; i++){
+
+      quickContactBtn.innerHTML = contactIcons[i];
+      await wait(3000);
+    }
+}
+}
+
+changeIcons();
+
 
 
 const accordionItemHeaders = document.querySelectorAll('.accordion-item-header');
@@ -240,7 +284,7 @@ function displayNews(news) {
     modalContents.push({
       name: `news-${index}`,
       title: item.title,
-      text: item.text.replace(/\n/g, '<br>')
+      text: `<article>${item.text.replace(/\n/g, '<br>')}</article>`,
     });
 
     const newsItem = document.createElement('div');

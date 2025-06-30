@@ -29,6 +29,7 @@
             <ul class="nav-list">
                 <li class="nav-list-item"><a href="#" class="nav-link btn-to-modal" data-modal="aboutInfo">Обо мне</a></li>
                 <li class="nav-list-item"><a href="#products" class="nav-link">Услуги</a></li>
+                <li class="nav-list-item"><a href="#form" class="nav-link">Оставить заявку</a></li>
                 <li class="nav-list-item"><a href="#news" class="nav-link">Новости и практика</a></li>
                 <li class="nav-list-item"><a href="#" class="nav-link btn-to-modal" data-modal="contactInfo">Контакты</a></li>
             </ul>
@@ -40,22 +41,25 @@
             <figure class="photo-hidden" aria-hidden="true">
                 <img src="./assets/pics/aboutphoto.jpg" alt="Адвокат Борисов фото" loading="lazy">
             </figure>
-            <div class="section-pic-container section-pic-container-about">
-                <div class="section-pic-overlay">
-                    <h2 class="hero-text-h2">Приветствую Вас!</h2>
-                    <h1 class="hero-text-h1 heading">Я Валентин Валерьевич Борисов</h1>
+            <div class="pic-container pic-container-about">
+                <div class="pic-overlay">
+                    <h1 class="heading">Валентин Валерьевич Борисов</h1>
                 </div>
             </div>
-            <article class="hero-text">
-                <h3 class="hero-text-h3">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</h3>
+            <article class="hero-text-zone">
+                <h2 class="hero-description">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</h2>
                 <div class="hero-btn-group">
                     <a href="#" class="btn btn-to-modal" data-modal="aboutInfo">Обо мне</a>
                     <a href="#" class="btn btn-to-modal" data-modal="contactInfo">Связаться <i class='bx bx-phone'></i></a>
                 </div>
             </article>
         </section>
-        <section class="section">
-            <h3 class="accordion-item-header">Оставьте заявку, и я свяжусь с Вами</h3>
+        <section class="section section-form">
+            <h2 class="heading heading-form" id="form">Теперь давайте поговорим о Вас</h2>
+            <h3 class="sub-heading sub-heading-form">Заполните короткую форму ниже, и мы начнем решать Ваш вопрос прямо сейчас</h3>
+            <div class="accordion accordion-form">
+                <article class="accordion-item">
+                    <h3 class="accordion-item-header">Заполнить форму</h3>
                     <div class="accordion-item-body">
                         <div class="accordion-item-body-content">
                              <form class="contact-form" id="contact-form">
@@ -83,15 +87,17 @@
                             </form>
                         </div>
                     </div>
+                </article>
+            </div>
         </section>
         <section class="section section-products">
-            <div class="section-pic-container" id="products">
-                <div class="section-pic-overlay">
-                    <h1 class="section-products-h1 heading">Услуги</h1>
-                    <p class="section-products-p">Предлагаю следующие услуги для физических и юридических лиц</p>
+            <div class="pic-container" id="products">
+                <div class="pic-overlay">
+                    <h1 class="heading products-heading">Услуги</h1>
+                    <h2 class="sub-heading products-sub-heading">Предлагаю следующие услуги для физических и юридических лиц</h2>
                 </div>
             </div>
-            <div class="section-products-wrapper">
+            <div class="products-wrapper">
                 <div class="accordion">
                 <article class="accordion-item">
                     <h3 class="accordion-item-header">Уголовное право</h3>
@@ -251,15 +257,15 @@
                     </div>
                 </article>
             </div>
-            <div class="section-products-extra">
-                <div class="section-products-extra-title">Обращаю Ваше внимание!</div>
-                <ul class="section-products-extra-text">
-                    <li class="section-products-extra-item">У меня отсутствует прoфдефоpмация в виде нeдовepия к словaм клиeнта и зaвeдомaя пpошивкa в гoловe пo т.н. "обвинитeльному уклoну".</li> 
-                    <li class="section-products-extra-item">Для мeня "пpeзумпция дoстовepноcти" свeдений, пoлученных от доверителя, не пустой звук поэтому я погружаюсь в стратегию защиты с головой, работая с полной отдачей.</li>
-                    <li class="section-products-extra-item"> Помогу оценить целесообразность обращения в судебные органы.</li>
-                    <li class="section-products-extra-item"> Моя деятельность направлена на оказание реальной юридической помощи.
+            <div class="products-extra">
+                <h2 class="heading">Преимущества:</h2>
+                <ul class="products-extra-text">
+                    <li class="products-extra-item">У меня отсутствует прoфдефоpмация в виде нeдовepия к словaм клиeнта и зaвeдомaя пpошивкa в гoловe пo т.н. "обвинитeльному уклoну".</li> 
+                    <li class="products-extra-item">Для мeня "пpeзумпция дoстовepноcти" свeдений, пoлученных от доверителя, не пустой звук поэтому я погружаюсь в стратегию защиты с головой, работая с полной отдачей.</li>
+                    <li class="products-extra-item"> Моя деятельность направлена на оказание реальной юридической помощи.
                     Не берусь за те дела, которые считаю безнадежными.</li>
-                    <li class="section-products-extra-item">Если Ваша проблема действительно не решаема или результат может быть неоднозначным, мой долг – честно сказать Вам об этом.</li>
+                    <li class="products-extra-item">Если Ваша проблема действительно не решаема или результат может быть неоднозначным, мой долг – честно сказать Вам об этом.</li>
+                    <li class="products-extra-item"> Помогу оценить целесообразность обращения в судебные органы.</li>
                 </ul>
             </div>
             </div>
@@ -268,25 +274,25 @@
             <div class="modal__main">
                 <button class="modal-close-btn">&#10006;</button>
                 <div class="modal-content">
-                    <h2 class="modal-title">Модальное окно</h2>
-                    <div class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum adipisci placeat laboriosam quo a aspernatur, repellat praesentium molestiae consequatur deserunt ullam quisquam quae error molestias maiores cupiditate ex ipsam.
+                    <p class="modal-title">Модальное окно</p>
+                    <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum adipisci placeat laboriosam quo a aspernatur, repellat praesentium molestiae consequatur deserunt ullam quisquam quae error molestias maiores cupiditate ex ipsam.
                     Nemo ipsa maxime accusantium modi facilis blanditiis ipsum hic dolorem vero ipsam, aliquam atque nihil quis adipisci repudiandae expedita vel totam consectetur, temporibus, recusandae rerum? Illo qui laudantium quisquam sunt!
-                    Excepturi quis quae sapiente quibusdam optio cum eos omnis ea, voluptatum possimus tenetur at ullam? Porro fugit sint quia ipsum illo quos hic animi error, eum, minus, beatae harum sit.</div>
+                    Excepturi quis quae sapiente quibusdam optio cum eos omnis ea, voluptatum possimus tenetur at ullam? Porro fugit sint quia ipsum illo quos hic animi error, eum, minus, beatae harum sit.</p>
                 </div>
             </div>
         </section>
         <section class="section-news section">
-            <div class="section-pic-container section-pic-container-two">
-                <div class="section-pic-overlay">
-                    <h1 class="section-news-h1 heading" id="news">Новости и практика</h1>
-                    <p class="section-news-p">Случаи из практики, мини-обзоры на законодательные новшества и другое</p>
+            <div class="pic-container pic-container-two">
+                <div class="pic-overlay">
+                    <h2 class="heading news-heading" id="news">Новости и практика</h2>
+                    <h3 class="sub-heading news-sub-heading">Случаи из практики, мини-обзоры на законодательные новшества и другое</h3>
                 </div>
             </div>
             <div id="news-container" class="news-container">Загрузка новостей...</div>
         </section>
     </main>
     <footer class="footer">
-        <h3 class="footer-title">Адвокат Борисов</h3>
+        <h2 class="footer-title">Адвокат Борисов</h2>
         <div class="social-icons">
             <a href="tel:+79263451036" class="link-icon">
                 <i class='bx bx-phone'></i>
