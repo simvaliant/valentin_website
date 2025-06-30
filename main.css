@@ -669,13 +669,18 @@ body.modal-open {
 
 @media only screen and (max-width: 590px){
 
+    .logo-text,
+    .heading{
+        font-size: 1.5rem;
+    }
+
     .header{
         padding: 1rem 5%;
     }
 
     #quick-contact-btn{
         font-size: 1.5rem;
-        padding: 0.25rem 1.5rem;
+        padding: 0.25rem 1rem;
     }
 
     .heading-form,
@@ -684,7 +689,7 @@ body.modal-open {
     }
 
     .sub-heading{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .hero-section{
@@ -699,12 +704,20 @@ body.modal-open {
         gap: 1rem;
     }
 
+    .pic-container{
+        height: 20vh;
+    }
+
     .pic-container-about{
         height: 50vh;
     }
 
-    .pic-container-about .pic-overlay{
+    .pic-overlay{
         height: 15vh;
+    }
+
+    .pic-container-about .pic-overlay{
+        height: 10vh;
     }
 
     .hero-pic-wrapper{
@@ -765,6 +778,7 @@ body.modal-open {
 
     .accordion-form{
         width: 100%;
+        margin-bottom: 0;
     }
 
     .products-extra{
@@ -915,7 +929,11 @@ body.modal-open {
 
     .pic-container-about .pic-overlay{
         height: 25vh;
-        justify-content: end;
+        justify-content: center;
+    }
+
+    .hero-text-zone{
+        max-width: 40%;
     }
 
     .products-extra{
