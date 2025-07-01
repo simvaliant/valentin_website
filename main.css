@@ -173,7 +173,7 @@ body.modal-open {
 }
 
 .navbar-mobile .nav-list{
-    max-width: 60%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     text-align: end;
@@ -311,11 +311,11 @@ body.modal-open {
 }
 
 .contact-form {
-  padding: 2rem;
+  padding: 0.25rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  width: 100%;
   margin: auto;
 }
 
@@ -372,6 +372,9 @@ body.modal-open {
     font-family: 'Merriweather', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #000, transparent) 1;
 }
 
 .modal-text{
@@ -690,6 +693,7 @@ body.modal-open {
 
     .sub-heading{
         font-size: 1rem;
+        max-width: 400px;
     }
 
     .hero-section{
@@ -700,7 +704,7 @@ body.modal-open {
     }
 
     .hero-text-zone{
-        padding: 0.5rem 2rem 1rem 2rem;
+        padding: 0.5rem 2rem 2rem 2rem;
         gap: 1rem;
     }
 
@@ -741,6 +745,10 @@ body.modal-open {
         display: block;
     }
 
+    .section-form{
+        padding: 2rem 0;
+    }
+
     .modal{
         align-items: end;
     }
@@ -777,7 +785,6 @@ body.modal-open {
     }
 
     .accordion-form{
-        width: 100%;
         margin-bottom: 0;
     }
 
