@@ -62,7 +62,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 const headingHero = document.getElementById('heading-hero');
-const phrases = ['Эксперт по правовым вопросам', 'Валентин Валерьевич Борисов', 'Больше 10 лет практики'];
+const phrases = ['Валентин Валерьевич Борисов', 'Эксперт по правовым вопросам', 'Больше 10 лет практики'];
 let index = 0;
 
 setInterval(() => {
