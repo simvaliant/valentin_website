@@ -12,7 +12,7 @@ function toggleMenu(open) {
       opacity: 1;
       transition: all 0.5s ease;
       pointer-events: none;
-      background-color: hsla(0, 0%, 0%, 0.700);
+      background-color: hsla(0, 0%, 0%, 0.850);
       position: fixed;
       inset: 0;
     `;
@@ -59,6 +59,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+const headingHero = document.getElementById('heading-hero');
+const phrases = ['Эксперт по правовым вопросам', 'Валентин Валерьевич Борисов', 'Больше 10 лет практики'];
+let index = 0;
+
+setInterval(() => {
+  headingHero.classList.add('heading-hidden');
+  
+  setTimeout(() => {
+    index = (index + 1) % phrases.length;
+    heading.textContent = phrases[index];
+    heading.classList.remove('heading-hidden');
+  }, 1000); 
+}, 6000); 
 
 
 const modal = document.querySelector('.modal');
@@ -138,8 +153,10 @@ const modalContents = [
         title: 'Информация обо мне',
         text: `
         <p class="info-text-p">Немного информации обо мне, чтобы Вам было проще принять решение о сотрудничестве:</p>
+
+        <p class="info-text-p">Адвокат Адвокатской палаты Московской области с реестровым номером 50/10434, член Московской коллегии адвокатов "Адвокаты Куприяновы и партнёры", эксперт Адвокатской газеты, а также магистр истории.</p>
         
-        <p class="info-text-p">Первоначально обучался по классической гуманитарной системе в Православном Свято-Тихоновском Гуманитарном Университете по направлениям "История" и "Теология", получив степень магистра истории. Далее изучал право, и, уже будучи дипломированным юристом, занялся частной адвокатской практикой.
+        <p class="info-text-p">Первоначально обучался по классической гуманитарной системе по направлениям "История" и "Теология", получив степень магистра истории. Далее изучал право, и, уже будучи дипломированным юристом, занялся частной адвокатской практикой.
         </p>
         
         <p class="info-text-p">В отличии от многих коллег, пришедших в адвокатуру после работы в следственных органах и привыкших смотреть на окружающих с позиции обвинения, я сpазу же после обучения стaл защитником, и именнo пoэтoму у меня отсутствует прoфдефоpмация в виде нeдовepия к словaм клиeнта и зaвeдомaя установка в гoловe пo т.н. "обвинитeльному уклoну".
@@ -172,7 +189,7 @@ async function changeIcons(){
     for(let i = 0; i < contactIcons.length; i++){
 
       quickContactBtn.innerHTML = contactIcons[i];
-      await wait(3000);
+      await wait(6000);
     }
 }
 }
