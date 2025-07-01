@@ -70,8 +70,8 @@ setInterval(() => {
   
   setTimeout(() => {
     index = (index + 1) % phrases.length;
-    heading.textContent = phrases[index];
-    heading.classList.remove('heading-hidden');
+    headingHero.textContent = phrases[index];
+    headingHero.classList.remove('heading-hidden');
   }, 1000); 
 }, 6000); 
 
